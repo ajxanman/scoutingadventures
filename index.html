@@ -1,27 +1,59 @@
-<doctype html>
+<!doctype html>
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <title>Scouting Adventures</title>
 </head>
 <body>
+<div id="header">
 <script>
+var rank = "Scout"
+var points = 0
 var troop = prompt("Hello! Welcome to Scouting Adventures! This is a game where you can vurtually expeirience the thrills of scouting! First of all, what troop are you going to join?","Type in your troop number here!");
 for (var i = 0; i < 1;) {
-
 do {
 if (isNaN(troop) == true) {
     troop = prompt("Please use a number!")
   }
 else {
-    window.alert("Ok, so you have joined troop " + troop + "! This is only the begining of a wonderful adventure in which you will make new friends, learn new skills, and experience an adventure like no other!");
+    window.alert("Ok, so you have joined troop " + troop + "! Click 'ok' to begin your scouting adventure!");
     i++
   }
 }
 while (isNaN(troop) == true)
 }
+switch (points) {
+  case 100:
+      rank = "Tenderfoot";
+    break;
+  case 250:
+      rank = "Second Class";
+    break;
+  case 400:
+      rank = "First Class";
+    break;
+  case 700:
+      rank = "Star";
+    break;
+  case 1200:
+      rank = "Life";
+    break;
+  case 1800:
+      rank = "Eagle"
+    break;
+};
+</script>
+<h3>Welcome to your Scout Dashboard!</h2>
+<h5>This is the place where you can review your entire life of Scouts! This is where you can go on camp-outs and take classes! Do those will earn you Scout points, and the more points you earn the higher your rank!</h5>
+<p id="Rank" onclick="func()"></p>
+</div>
+<script>
+function func() {
+  document.getElementById("Rank").innerHTML = "Your current rank is " + rank + "!"
+}
 </script>
 </body>
 </html>
+
 
 
