@@ -1,0 +1,12 @@
+*{
+  font-family: sans-serif;
+}
+#header{
+  height: 850px;
+  width: 100%;
+  background-color: #d9b18c;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 30px;
+  color: #336600;
+}
