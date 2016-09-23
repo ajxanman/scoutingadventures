@@ -42,18 +42,28 @@ switch (points) {
       rank = "Eagle"
     break;
 };
+
 </script>
-<h3>Welcome to your Scout Dashboard!</h2>
-<h5>This is the place where you can review your entire life of Scouts! This is where you can go on camp-outs and take classes! Doing those will earn you Scout points, and the more points you earn the higher your rank!</h5>
-<p id="Rank" onclick="func()"></p>
+   <h3>Welcome to your Scout Dashboard!</h2>
+   <h5>This is the place where you can review your entire life of Scouts! This is where you can go on camp-outs and take classes! Doing those will earn you Scout points, and the more points you earn
+   the higher your rank!</h5>
+   <p id="rankdis" onclick="func()">Click here to see your rank!</p>
+   <p id="point" onclick="func2()">Click here to see your points!</p>
+   <input type="button" value="Camp" onclick="camp()"/>
+   <input type="button" value="Classes" onclick=""/>
 </div>
 <script>
+function func2(){
+  document.getElementById("point").innerHTML = "You have " + points + " points! You are";
+}
 function func() {
-  document.getElementById("Rank").innerHTML = "Your current rank is " + rank + "!"
+  document.getElementById("rankdis").innerHTML = "Your rank is " + rank + "!";
+}
+function camp() {
+  var camping = confirm("Are you ready to go on a camp-out?","Yep!");
+  if (camping == true) {
+  }
 }
 </script>
 </body>
 </html>
-
-
-
