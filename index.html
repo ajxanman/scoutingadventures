@@ -3,93 +3,17 @@
 <head>
   <link rel="icon" href="http://www.iconarchive.com/download/i66332/thegirltyler/brand-camp/Camp-Fire-Stories.ico">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <script type="text/javascript" src="index.js"></script>
   <title>Scouting Adventures</title>
 </head>
 <body>
 <div id="header">
-<script>
-var rank = "Scout"
-var points = 0
-var troop = prompt("Hello! Welcome to Scouting Adventures! This is a game where you can vurtually expeirience the thrills of scouting! First of all, what troop are you going to join?","Type in your troop number here!");
-//These logs are for de-bugging
-console.log(rank);
-console.log(points);
-console.log(troop);
-for (var i = 0; i < 1;) {
-do {
-if (isNaN(troop) == true) {
-    troop = prompt("Please use a number!")
-  }
-else {
-    window.alert("Ok, so you have joined troop " + troop + "! Click 'ok' to begin your scouting adventure!");
-    i++
-  }
-}
-while (isNaN(troop) == true)
-}
-switch (points) {
-  case 100:
-      rank = "Tenderfoot";
-    break;
-  case 250:
-      rank = "Second Class";
-    break;
-  case 400:
-      rank = "First Class";
-    break;
-  case 700:
-      rank = "Star";
-    break;
-  case 1200:
-      rank = "Life";
-    break;
-  case 1800:
-      rank = "Eagle"
-    break;
-};
-function func2() {
-  document.getElementById("point").innerHTML = "You have " + points + " points!";
-};
-function func() {
-  document.getElementById("rankdis").innerHTML = "Your rank is " + rank + "!";
-};
-</script>
    <h3>Welcome to your Scout Dashboard!</h3>
    <h5>This is the place where you can review your entire life of Scouts! This is where you can go on camp-outs and take classes! Doing those will earn you Scout points, and the more points you earn the higher your rank!</h5>
    <p id="rankdis" onclick="func()">Click here to see your rank!</p>
    <p id="point" onclick="func2()">Click here to see your points!</p>
    <input type="button" value="Hike" onclick="hike()"/>
-<script>
-function hike() {
-var hiking = confirm("Are you ready to hike?");
-if (hiking = true){
-  var lochike = prompt("Where do you want to hike? Your options are Grand Canyon, Forest, Mountain, or Death Valley").toLowerCase()
-  switch (lochike){
-    case ("grand canyon"):
-        points = points + 15;
-        window.alert("What a view! You have earned 15 points for hiking here! You now have " + points + " points!");
-        break;
-    case ("death valley"):
-        points = points + 20;
-        window.alert("Hot choice! You have earned 20 points for hiking here! You now have " + points + " points!");
-        break;
-    case ("forest"):
-        points = points + 5;
-        window.alert("Oh look, a rabbit! For hiking here you have earned 5 points! You now have " + points + " points!");
-      break;
-    case ("mountain"):
-        points = points + 10;
-        window.alert("You're on top of the world! You have earned 10 points for hiking here! You now have " + points + " points!");
-      break;
-    default:
-        window.alert("Sorry! Troop " + troop + " can't go there! Please try again and check your spelling!");
-     }
-    }
-    else{
-      window.alert("Oh. Ok!");
-    }
-  };
-</script>
 </div>
 </body>
 </html>
+
