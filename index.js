@@ -1,24 +1,25 @@
 var rank = "Scout"
 var points = 0
 var troop = prompt("Hello! Welcome to Scouting Adventures! This is a game where you can vurtually expeirience the thrills of scouting! First of all, what troop are you going to join?","Type in your troop number here!");
+var merits = [];
 function rankAdvan(){
   switch (points) {
-    case 100:
+    case 50:
         rank = "Tenderfoot";
       break;
-    case 250:
+    case 125:
         rank = "Second Class";
       break;
-    case 400:
+    case 200:
         rank = "First Class";
       break;
-    case 700:
+    case 350:
         rank = "Star";
       break;
-    case 1200:
+    case 525:
         rank = "Life";
       break;
-    case 1800:
+    case 700:
         rank = "Eagle"
       break;
   };
@@ -69,4 +70,30 @@ function hike() {
      }
      rankAdvan()
   };
-
+function classes(){
+    var whichClass = prompt("Classes earn you points and merit badges! Which class do you want to take: Fishing, Camping, First Aid, or Swimming").toLowerCase();
+    switch (whichClass) {
+      case ("swimming"):
+          points = points + 15;
+          merits[0] = "Swimming";
+          window.alert("Just keep swimming, just keep swimming! For taking this class you have earned 15 points and the Swimming merit badge! You now have a total of " + points + " points!");
+        break;
+        case ("fishing"):
+          points = points + 10;
+          merits[1] = "Fishing";
+          window.alert("Catch of the day! You have earned 10 points for taking this class! You now have a total of " + points + " points!");
+        break;
+        case ("camping"):
+          merits[2] = "Camping";
+          points =  points + 15;
+          window.alert("Camping... It's in-tents! For taking this class you have earned 15 points! You now have a total of " + points + " points!");
+          break;
+        case ("first aid"):
+          merits[3] = "First Aid";
+          points = points + 15;
+          window.alert("Wrap it up! You have earned 15 points! You now have a total of " + points + " points!");
+          break;
+      default:
+          window.alert("I don't think " + whichClass + "was one of the options, please check your spelling and try again!");
+    }
+};
