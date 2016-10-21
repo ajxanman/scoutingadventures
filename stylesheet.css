@@ -16,3 +16,6 @@
 #point{
   float: right;
 }
+li{
+  list-style-type: none;
+}
