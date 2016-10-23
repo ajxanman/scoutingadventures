@@ -6,6 +6,7 @@ var camping = false;
 var first_aid = false;
 var swimming = false;
 var merits = [fishing, camping, first_aid, swimming];
+console.log(rank, points, troop);
 function rankAdvan(){
   switch (points) {
     case 50:
