@@ -1,7 +1,5 @@
-var rank = "Scout"
-var points = 0
-var trvar rank = "Scout"
-var points = 0
+var rank = "Scout";
+var points = 0;
 var troop = prompt("Hello! Welcome to Scouting Adventures! This is a game where you can vurtually expeirience the thrills of scouting! First of all, what troop are you going to join?","Type in your troop number here!");
 var fishing = false;
 var camping = false;
