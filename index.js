@@ -5,7 +5,8 @@ var fishing = false;
 var camping = false;
 var first_aid = false;
 var swimming = false;
-var merits = [fishing, camping, first_aid, swimming];
+var fireSafety = false;
+var merits = [fishing, camping, first_aid, swimming, fireSafety]; //Add new merit awards at the front
 function rankAdvan(){
   switch (points) {
     case 50:
@@ -41,13 +42,13 @@ else {
 while (isNaN(troop) == true)
 }
 function func2() {
-  document.getElementById("point").innerHTML = "You have " + points + " points!";
+  window.alert("You have " + points + " points!");
 };
 function func() {
-  document.getElementById("rankdis").innerHTML = "Your rank is " + rank + "!";
+  window.alert("Your rank is " + rank + "!");
 };
 function hike() {
-  var lochike = prompt("Where do you want to hike? Your options are Grand Canyon, Forest, Mountain, or Death Valley? (Click 'cancel' to cancel!)").toLowerCase()
+  var lochike = prompt("Where do you want to hike? Your options are Grand Canyon, Forest, Mountain, or Death Valley?").toLowerCase()
   switch (lochike){
     case ("grand canyon"):
         points = points + 15;
@@ -114,4 +115,25 @@ function meritDis() {
   if (merits[3] == true) {
     document.getElementById("swim").innerHTML = "Swimming";
   }
+};
+function camp() {
+    var when = prompt("Ok, do you want to go camping in the winter or summer?","Type 'winter' or 'summer' here!").toLowerCase();
+    var where = prompt("Sweet! I like " + when + " camp! Next, where to you want to camp? The options are: Lost Pines, Summit Bechtel, Or Boxwell").toLowerCase();
+    switch (where) {
+      case "lost pines":
+          points = points + 30;
+          window.alert("Did you find them? you have earned 30 points for camping here. You now have " + points + " total points!");
+        break;
+      case "summit bechtel":
+          points = points + 40;
+          window.alert("For camping here you have earned 40 points! You now have a total of " + points + " points! Did you know that the Boy Scout National Jamboree is July 19, 2017 at Summit Bechtel Reserve? If you are a Venturer or a First Class Scout who will be at least 12 years old (or an 11-year-old who has completed sixth grade) by July 19 then you are eligible to register for this once-in-a-lifetime event! To learn more visit: BSAJamboree.org");
+        break;
+        case "boxwell":
+            points = points + 30;
+            window.alert("For camping here you have earned 30 points! You now have a total of " + points + " points!");
+          break;
+      default:
+      window.alert("Sorry! That wasn't one of the options! Please check your spelling and try again!");
+
+    }
 };
