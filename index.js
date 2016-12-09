@@ -8,27 +8,26 @@ var swimming = false;
 var fireSafety = false;
 var merits = [fishing, camping, first_aid, swimming, fireSafety]; //Add new merit awards at the front
 function rankAdvan(){
-  switch (points) {
-    case 50:
+    if(points > 50){
         rank = "Tenderfoot";
-      break;
-    case 125:
+      }
+    else if(points > 125){
         rank = "Second Class";
-      break;
-    case 200:
+      }
+    else if(points > 200){
         rank = "First Class";
-      break;
-    case 350:
+      }
+    else if(points > 350){
         rank = "Star";
-      break;
-    case 525:
+      }
+    else if(points > 525){
         rank = "Life";
-      break;
-    case 700:
-        rank = "Eagle"
-      break;
+      }
+    else if(points > 700){
+        rank = "Eagle";
+      }
   };
-};
+
 for (var i = 0; i < 1;) {
 do {
 if (isNaN(troop) == true) {
@@ -122,13 +121,16 @@ function camp() {
     switch (where) {
       case "lost pines":
           points = points + 30;
+          rankAdvan()
           window.alert("Did you find them? you have earned 30 points for camping here. You now have " + points + " total points!");
         break;
       case "summit bechtel":
           points = points + 40;
+          rankAdvan()
           window.alert("For camping here you have earned 40 points! You now have a total of " + points + " points! Did you know that the Boy Scout National Jamboree is July 19, 2017 at Summit Bechtel Reserve? If you are a Venturer or a First Class Scout who will be at least 12 years old (or an 11-year-old who has completed sixth grade) by July 19 then you are eligible to register for this once-in-a-lifetime event! To learn more visit: BSAJamboree.org");
         break;
         case "boxwell":
+            rankAdvan()
             points = points + 30;
             window.alert("For camping here you have earned 30 points! You now have a total of " + points + " points!");
           break;
