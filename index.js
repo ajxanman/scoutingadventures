@@ -117,22 +117,27 @@ function meritDis() {
 };
 function camp() {
     var when = prompt("Ok, do you want to go camping in the winter or summer?","Type 'winter' or 'summer' here!").toLowerCase();
-    var where = prompt("Sweet! I like " + when + " camp! Next, where to you want to camp? The options are: Lost Pines, Summit Bechtel, Or Boxwell").toLowerCase();
+    var where = prompt("Sweet! I like " + when + " camp! Next, where to you want to camp? The options are: Lost Pines, Summit Bechtel, Camp Pioneer, Or Boxwell").toLowerCase();
     switch (where) {
       case "lost pines":
           points = points + 30;
-          rankAdvan()
+          rankAdvan();
           window.alert("Did you find them? you have earned 30 points for camping here. You now have " + points + " total points!");
         break;
       case "summit bechtel":
           points = points + 40;
-          rankAdvan()
+          rankAdvan();
           window.alert("For camping here you have earned 40 points! You now have a total of " + points + " points! Did you know that the Boy Scout National Jamboree is July 19, 2017 at Summit Bechtel Reserve? If you are a Venturer or a First Class Scout who will be at least 12 years old (or an 11-year-old who has completed sixth grade) by July 19 then you are eligible to register for this once-in-a-lifetime event! To learn more visit: BSAJamboree.org");
         break;
         case "boxwell":
-            rankAdvan()
             points = points + 30;
+            rankAdvan();
             window.alert("For camping here you have earned 30 points! You now have a total of " + points + " points!");
+          break;
+        case "camp pioneer":
+          points = points + 30;
+          rankAdvan();
+          window.alert("For camping here you have earn 30 points! You now have a total of " + points + " Points!");
           break;
       default:
       window.alert("Sorry! That wasn't one of the options! Please check your spelling and try again!");
