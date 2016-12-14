@@ -5,8 +5,8 @@ var fishing = false;
 var camping = false;
 var first_aid = false;
 var swimming = false;
-var fireSafety = false;
-var merits = [fishing, camping, first_aid, swimming, fireSafety]; //Add new merit awards at the front
+var music = false;
+var merits = [fishing, camping, first_aid, swimming, music]; //Add new merit awards at the front
 function rankAdvan(){
     if(points > 50){
         rank = "Tenderfoot";
@@ -71,7 +71,7 @@ function hike() {
      rankAdvan()
   };
 function classes(){
-    var whichClass = prompt("Classes earn you points and merit awards! Which class do you want to take: Fishing, Camping, First Aid, or Swimming").toLowerCase();
+    var whichClass = prompt("Classes earn you points and merit awards! Which class do you want to take: Fishing, Camping, First Aid, Music, or Swimming").toLowerCase();
     switch (whichClass) {
       case ("swimming"):
           points = points + 15;
@@ -97,6 +97,12 @@ function classes(){
           points = points + 15;
           window.alert("Wrap it up! You have earned 15 points! You now have a total of " + points + " points!");
           break;
+        case ("music"):
+            music = true;
+            merits[4] = music;
+            points = points + 10;
+            window.alert("You have earned 10 points! You now have a total of " + points + " points!");
+          break;
       default:
           window.alert("I don't think " + whichClass + "was one of the options, please check your spelling and try again!");
     }
@@ -113,6 +119,9 @@ function meritDis() {
   }
   if (merits[3] == true) {
     document.getElementById("swim").innerHTML = "Swimming";
+  }
+  if (merits[4] == true) {
+    document.getElementById("music").innerHTML = "Music";
   }
 };
 function camp() {
