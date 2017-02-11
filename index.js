@@ -125,31 +125,31 @@ function meritDis() {
   }
 };
 function camp() {
-    var when = prompt("Ok, do you want to go camping in the winter or summer?","Type 'winter' or 'summer' here!").toLowerCase();
-    var where = prompt("Sweet! I like " + when + " camp! Next, where to you want to camp? The options are: Lost Pines, Summit Bechtel, Camp Pioneer, Or Boxwell").toLowerCase();
-    switch (where) {
-      case "lost pines":
-          points = points + 30;
-          rankAdvan();
-          window.alert("Did you find them? you have earned 30 points for camping here. You now have " + points + " total points!");
+    var where = prompt("Where do you want to camp? Forest, mountains, or field.").toLowerCase();
+    var what = prompt("Cool! Do you want to explore, or take a class?","Type 'class' or 'explore' here!").toLowerCase();
+    switch (what) {
+      case ("class"):
+        classes();
         break;
-      case "summit bechtel":
-          points = points + 40;
-          rankAdvan();
-          window.alert("For camping here you have earned 40 points! You now have a total of " + points + " points! Did you know that the Boy Scout National Jamboree is July 19, 2017 at Summit Bechtel Reserve? If you are a Venturer or a First Class Scout who will be at least 12 years old (or an 11-year-old who has completed sixth grade) by July 19 then you are eligible to register for this once-in-a-lifetime event! To learn more visit: BSAJamboree.org");
+      case ("explore"):
+        switch (where) {
+          case ("forest"):
+            points = points + 15;
+            window.alert("You explore the forest. All seems quiet until you hear a rustle close by. A deer bounds out of a bush and runs off! You have earned 15 points for these activities. You now have a total of " + points + " points!");
+            break;
+          case ("mountains"):
+            points = points + 15;
+            window.alert("You explore the mountain. You come across a small cave that tunnles through the moutain. When you reach the end you find a chamber with a lake of lava in the middle! You have earned 15 points for your adventure. You now have a total of " + points + " points!");
+            break;
+          case ("field"):
+            points = points + 15;
+            window. alert("You explore the field. As you are walking, you step in a small hole in the ground and you fall. When you roll over, you see a bald eagle in the sky! You have earned 15 points for your adventure. You now have a total of " + points + " points!")
+            break;
+          default:
+            
+        }
         break;
-        case "boxwell":
-            points = points + 30;
-            rankAdvan();
-            window.alert("For camping here you have earned 30 points! You now have a total of " + points + " points!");
-          break;
-        case "camp pioneer":
-          points = points + 30;
-          rankAdvan();
-          window.alert("For camping here you have earn 30 points! You now have a total of " + points + " Points!");
-          break;
       default:
-      window.alert("Sorry! That wasn't one of the options! Please check your spelling and try again!");
-
+        window.alert("I don't think that was one of the options!");
     }
 };
