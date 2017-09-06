@@ -1,6 +1,6 @@
 var rank = "Scout"
 var points = 0
-var troop = prompt("Hello! Welcome to Scouting Adventures! This is a game where you can vurtually expeirience the thrills of scouting! First of all, what troop are you going to join?","Type in your troop number here!");
+var troop = prompt("Hello! Welcome to Scouting Adventures! This is a game where you can virtually expeirience the thrills of scouting! First of all, what troop are you going to join?","Type in your troop number here!");
 var fishing = false;
 var camping = false;
 var first_aid = false;
@@ -10,21 +10,27 @@ var merits = [fishing, camping, first_aid, swimming, music]; //Add new merit awa
 function rankAdvan(){
     if(points > 50){
         rank = "Tenderfoot";
+        rankUp();
       }
     else if(points > 125){
         rank = "Second Class";
+        rankUp();
       }
     else if(points > 200){
         rank = "First Class";
+        rankUp();
       }
     else if(points > 350){
         rank = "Star";
+        rankUp();
       }
     else if(points > 525){
         rank = "Life";
+        rankUp();
       }
     else if(points > 700){
         rank = "Eagle";
+        rankUp();
       }
   };
 
@@ -34,7 +40,7 @@ if (isNaN(troop) == true) {
     troop = prompt("Please use a number!")
   }
 else {
-    window.alert("Ok, so you have joined troop " + troop + "! Click 'ok' to begin your scouting adventure!");
+    window.alert("Ok, you have joined troop " + troop + "! Click 'ok' to begin your scouting adventure!");
     i++
   }
 }
@@ -106,6 +112,7 @@ function classes(){
       default:
           window.alert("I don't think " + whichClass + "was one of the options, please check your spelling and try again!");
     }
+    rankAdvan
 };
 function meritDis() {
   if (merits[0] == true) {
@@ -146,10 +153,12 @@ function camp() {
             window. alert("You explore the field. As you are walking, you step in a small hole in the ground and you fall. When you roll over, you see a bald eagle in the sky! You have earned 15 points for your adventure. You now have a total of " + points + " points!")
             break;
           default:
-            
+
         }
         break;
       default:
         window.alert("I don't think that was one of the options!");
     }
+    rankAdvan()
 };
+function rankUp() {window.alert("Congratulations! You are now " + rank + " rank!")}
