@@ -1,5 +1,5 @@
-var rank = "Scout"
-var points = 0
+var rank = "Scout";
+var points = 0;
 var troop = prompt("Hello! Welcome to Scouting Adventures! This is a game where you can virtually expeirience the thrills of scouting! First of all, what troop are you going to join?","Type in your troop number here!");
 var fishing = false;
 var camping = false;
@@ -8,27 +8,27 @@ var swimming = false;
 var music = false;
 var merits = [fishing, camping, first_aid, swimming, music]; //Add new merit awards at the front
 function rankAdvan(){
-    if(points > 50){
+    if(points > 49){
         rank = "Tenderfoot";
         rankUp();
       }
-    else if(points > 125){
+    else if(points > 124){
         rank = "Second Class";
         rankUp();
       }
-    else if(points > 200){
+    else if(points > 199){
         rank = "First Class";
         rankUp();
       }
-    else if(points > 350){
+    else if(points > 349){
         rank = "Star";
         rankUp();
       }
-    else if(points > 525){
+    else if(points > 524){
         rank = "Life";
         rankUp();
       }
-    else if(points > 700){
+    else if(points > 699){
         rank = "Eagle";
         rankUp();
       }
@@ -42,10 +42,10 @@ if (isNaN(troop) == true) {
 else {
     window.alert("Ok, you have joined troop " + troop + "! Click 'ok' to begin your scouting adventure!");
     i++
-;  }
+  }
 }
 while (isNaN(troop) == true)
-}
+};
 function func2() {
   window.alert("You have " + points + " points!");
 };
@@ -161,4 +161,6 @@ function camp() {
     }
     rankAdvan();
 };
-function rankUp() {window.alert("Congratulations! You are now " + rank + " rank!")}
+function rankUp() {window.alert("Congratulations! You are now " + rank + " rank!")};
+
+console.log("JS is is de-bugged!"); //This will not log if there is anything fataly wrong with the code. Make any additions above it.
