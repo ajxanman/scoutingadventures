@@ -112,7 +112,7 @@ function classes(){
       default:
           window.alert("I don't think " + whichClass + "was one of the options, please check your spelling and try again!");
     }
-    rankAdvan
+    rankAdvan()
 };
 function meritDis() {
   if (merits[0] == true) {
