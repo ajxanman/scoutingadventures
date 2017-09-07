@@ -42,7 +42,7 @@ if (isNaN(troop) == true) {
 else {
     window.alert("Ok, you have joined troop " + troop + "! Click 'ok' to begin your scouting adventure!");
     i++
-  }
+;  }
 }
 while (isNaN(troop) == true)
 }
@@ -74,7 +74,7 @@ function hike() {
     default:
         window.alert("Sorry! Troop " + troop + " can't go there! Please try again and check your spelling!");
      }
-     rankAdvan()
+     rankAdvan();
   };
 function classes(){
     var whichClass = prompt("Classes earn you points and merit awards! Which class do you want to take: Fishing, Camping, First Aid, Music, or Swimming").toLowerCase();
@@ -112,7 +112,7 @@ function classes(){
       default:
           window.alert("I don't think " + whichClass + "was one of the options, please check your spelling and try again!");
     }
-    rankAdvan()
+    rankAdvan();
 };
 function meritDis() {
   if (merits[0] == true) {
@@ -159,6 +159,6 @@ function camp() {
       default:
         window.alert("I don't think that was one of the options!");
     }
-    rankAdvan()
+    rankAdvan();
 };
 function rankUp() {window.alert("Congratulations! You are now " + rank + " rank!")}
