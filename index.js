@@ -155,7 +155,8 @@ function meritDis() {
   }
 };
 function camp() {
-    var where = prompt("Where do you want to camp? Forest, mountains, or field.").toLowerCase();
+
+    var where = prompt("Where do you want to camp? Forest, mountains, beach, or field.").toLowerCase();
     var what = prompt("Cool! Do you want to explore, or take a class?","Type 'class' or 'explore' here!").toLowerCase();
     switch (what) {
       case ("class"):
@@ -175,7 +176,10 @@ function camp() {
             points = points + 15;
             window. alert("You explore the field. As you are walking, you step in a small hole in the ground and you fall. When you roll over, you see a bald eagle in the sky! You have earned 15 points for your adventure. You now have a total of " + points + " points!")
             break;
-          default:
+          case ("beach"):
+            points += 15;
+            window.alert("You explore the beach. You come across a tide pool with an abundance of sea creatures! You have earned 15 points for camping here! You now have a total of " + points + " points!");
+            break;
 
         }
         break;
@@ -187,5 +191,6 @@ function camp() {
 function notify() {
   window.alert("Congratulations! You are now " + rank + " rank!");
 };
+
 
 console.log("No fatal errors in JS!"); //This will not log if there is anything fataly wrong with the code. Make any additions above it.
