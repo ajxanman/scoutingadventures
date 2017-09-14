@@ -1,2 +1,2 @@
-# Scouting Adventure
-This is my first public game! If you want to help me develop this game, head on over to my ScoutTests repository and check the issues. That is where I debug my code before I publish it here!     
+# Scouting Adventures
+My name is Alex Jones, founder of Xan Studios Entertainment, and this is my first public game! I am a Boy Scout, and I have several friends who are not in Scouts, but want to try it without being comited to anything. That's where I got the idea for Scouting Adventures! This is a great way to see what Scouting is all about, online! It is still under construction, but it is public. I want to eventually turn this into an awesome multi-player game with achievments, fundraisers, weekend and week long campouts, and so much more!   
