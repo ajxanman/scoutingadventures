@@ -155,42 +155,54 @@ function meritDis() {
   }
 };
 function camp() {
-
-    var where = prompt("Where do you want to camp? Forest, mountains, beach, or field.").toLowerCase();
-    var what = prompt("Cool! Do you want to explore, or take a class?","Type 'class' or 'explore' here!").toLowerCase();
-    switch (what) {
-      case ("class"):
+  var where = prompt("Where do you want to camp? Forest, mountains, beach, or field.").toLowerCase();
+  switch (where) {
+    case ("forest"):
+    var what = prompt("Cool! Do you want to explore, or take a class?","Type 'Class' or 'Explore' here!").toLowerCase();
+      if (what == "explore") {
+        points = points + 15;
+        window.alert("You explore the forest. All seems quiet until you hear a rustle close by. A deer bounds out of a bush   and runs off! You have earned 15 points for these activities. You now have a total of " + points + " points!");
+      }
+      else if (what == "class") {
+        classes()
+      }
+      break;
+    case ("mountains"):
+    var what = prompt("Cool! Do you want to explore, or take a class?","Type 'Class' or 'Explore' here!").toLowerCase();
+      if (what == "explore") {
+        points = points + 15;
+        window.alert("You explore the mountain. You come across a small cave that tunnles through the moutain. When you reach the end you find a chamber with a lake of lava in the middle! You have earned 15 points for your adventure. You now have a total of " + points + " points!");
+      }
+      else if (what == "class") {
+        classes()
+      }
+      break;
+    case ("field"):
+      var what = prompt("Cool! Do you want to explore, or take a class?","Type 'Class' or 'Explore' here!").toLowerCase();
+      if (what == "explore") {
+        points = points + 15;
+        window. alert("You explore the field. As you are walking, you step in a small hole in the ground and you fall. When you roll over, you see a bald eagle in the sky! You have earned 15 points for your adventure. You now have a total of " + points + " points!");
+      }
+      else if (what == "class") {
         classes();
-        break;
-      case ("explore"):
-        switch (where) {
-          case ("forest"):
-            points = points + 15;
-            window.alert("You explore the forest. All seems quiet until you hear a rustle close by. A deer bounds out of a bush and runs off! You have earned 15 points for these activities. You now have a total of " + points + " points!");
-            break;
-          case ("mountains"):
-            points = points + 15;
-            window.alert("You explore the mountain. You come across a small cave that tunnles through the moutain. When you reach the end you find a chamber with a lake of lava in the middle! You have earned 15 points for your adventure. You now have a total of " + points + " points!");
-            break;
-          case ("field"):
-            points = points + 15;
-            window. alert("You explore the field. As you are walking, you step in a small hole in the ground and you fall. When you roll over, you see a bald eagle in the sky! You have earned 15 points for your adventure. You now have a total of " + points + " points!")
-            break;
-          case ("beach"):
-            points += 15;
-            window.alert("You explore the beach. You come across a tide pool with an abundance of sea creatures! You have earned 15 points for camping here! You now have a total of " + points + " points!");
-            break;
-
-        }
-        break;
-      default:
-        window.alert("I don't think that was one of the options!");
-    };
-    rankAdvan();
+      }
+      break;
+    case ("beach"):
+    var what = prompt("Cool! Do you want to explore, or take a class?","Type 'Class' or 'Explore' here!").toLowerCase();
+    if (what == "explore") {
+        points += 15;
+        window.alert("You explore the beach. You come across a tide pool with an abundance of sea creatures! You have earned 15 points for camping here! You now have a total of " + points + " points!");
+    }
+    else if (what == "class") {
+      classes();
+    }
+      break;
+  default:
+    window.alert("I don't think that was one of the options!");
+}
+  rankAdvan();
 };
 function notify() {
   window.alert("Congratulations! You are now " + rank + " rank!");
 };
-
-
 console.log("No fatal errors in JS!"); //This will not log if there is anything fataly wrong with the code. Make any additions above it.
