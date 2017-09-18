@@ -13,6 +13,8 @@ var d_Valley = false;
 var mountain = false;
 var forest = false;
 var hikeExp = [grandCanyon, d_Valley, mountain, forest];
+var campTimes = 0;
+var evrythngElseCamp = false;
 function notify() {
   window.alert("Congratulations! You are now " + rank + " rank!");
 };
@@ -112,10 +114,16 @@ function classes(){
           window.alert("Catch of the day! You have earned 10 points for taking this class! You now have a total of " + points + " points!");
         break;
         case ("camping"):
+        if (campTimes > 2) {
           camping = true;
           merits[1] = camping;
           points =  points + 15;
           window.alert("Camping... It's in-tents! For taking this class you have earned 15 points! You now have a total of " + points + " points!");
+        }
+        else {
+          var more = (3 - campTimes);
+          window.alert("Sweet! You have everything you need for this merit, except " + more + " more camping nights!");
+        }
           break;
         case ("first aid"):
           first_aid = true;
@@ -201,6 +209,14 @@ function camp() {
     window.alert("I don't think that was one of the options!");
 }
   rankAdvan();
+  campTimes += 1;
+  if (campTimes > 2) {
+    if (evrythngElseCamp = true) {
+      camping = true;
+      merits[1] = camping;
+      window.alert("Congratulations! You have earned the camping merit award!")
+    }
+  }
 };
 function notify() {
   window.alert("Congratulations! You are now " + rank + " rank!");
