@@ -174,6 +174,9 @@ function camp() {
       else if (what == "class") {
         classes()
       }
+      else {
+        window.alert("I don't think that was one of the options! Please check your spelling and try again!");
+      }
       break;
     case ("mountains"):
     var what = prompt("Cool! Do you want to explore, or take a class?","Type 'Class' or 'Explore' here!").toLowerCase();
@@ -183,6 +186,9 @@ function camp() {
       }
       else if (what == "class") {
         classes()
+      }
+      else {
+        window.alert("I don't think that was one of the options! Please check your spelling and try again!");
       }
       break;
     case ("field"):
@@ -194,6 +200,9 @@ function camp() {
       else if (what == "class") {
         classes();
       }
+      else {
+        window.alert("I don't think that was one of the options! Please check your spelling and try again!");
+      }
       break;
     case ("beach"):
     var what = prompt("Cool! Do you want to explore, or take a class?","Type 'Class' or 'Explore' here!").toLowerCase();
@@ -204,7 +213,10 @@ function camp() {
     else if (what == "class") {
       classes();
     }
-      break;
+    else {
+      window.alert("I don't think that was one of the options! Please check your spelling and try again!");
+    }
+        break;
   default:
     window.alert("I don't think that was one of the options!");
 }
