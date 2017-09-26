@@ -47,8 +47,14 @@ if (isNaN(troop) == true) {
     troop = prompt("Please use a number!")
   }
 else {
-    window.alert("Ok, you have joined troop " + troop + "! Click 'ok' to begin your scouting adventure!");
-    i++
+    if (troop == 666) {
+      document.write("http://ih0.redbubble.net/image.46738492.0562/flat,800x800,075,f.u2.jpg");
+      i++
+    }
+    else {
+      window.alert("Ok, you have joined troop " + troop + "! Click 'ok' to begin your scouting adventure!");
+      i++
+    }
   }
 }
 while (isNaN(troop) == true)
@@ -138,7 +144,7 @@ function classes(){
             window.alert("You have earned 10 points! You now have a total of " + points + " points!");
           break;
       default:
-          window.alert("I don't think " + whichClass + "was one of the options, please check your spelling and try again!");
+          window.alert("I don't think " + whichClass + " was one of the options, please check your spelling and try again!");
     };
     rankAdvan();
 };
@@ -222,11 +228,13 @@ function camp() {
 }
   rankAdvan();
   campTimes += 1;
-  if (campTimes > 2) {
-    if (evrythngElseCamp = true) {
-      camping = true;
-      merits[1] = camping;
-      window.alert("Congratulations! You have earned the camping merit award!")
+  if (camping = false){
+    if (campTimes > 2) {
+      if (evrythngElseCamp = true) {
+        camping = true;
+        merits[1] = camping;
+        window.alert("Congratulations! You have earned the camping merit award!")
+      }
     }
   }
 };
