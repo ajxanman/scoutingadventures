@@ -2,7 +2,7 @@
 *{
   font-family: sans-serif;
 }
-#header{
+#main{
   height: 850px;
   width: 100%;
   background-color: #d9b18c;
@@ -11,19 +11,31 @@
   font-size: 30px;
   color: #336600;
 }
-#rankdis{
+
+#stats{
   float: left;
 }
-#point{
+#meritdis{
   float: right;
+  margin-top: -20px;
+  width: 35%;
+}
+#buttons{
+  width: 100%;
+  margin-left: -400px;
+
 }
 li{
   list-style-type: none;
 }
-
 a:link{
   color: blue;
 }
 a:visited{
   color: blue;
+}
+#support{
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
 }
