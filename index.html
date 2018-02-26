@@ -1,5 +1,5 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
   <link rel="icon" href="http://www.iconarchive.com/download/i66332/thegirltyler/brand-camp/Camp-Fire-Stories.ico">
@@ -8,24 +8,29 @@
   <title>Scouting Adventures</title>
 </head>
 <body>
-<div id="header">
+<div id="main">
    <h3>Welcome to your Scout Dashboard!</h3>
    <h5>This is the place where you can review your entire life of Scouts! This is where you can hike, go on camp-outs, and take classes! Doing those will earn you Scout points, and the more points you earn the higher your rank!</h5>
-   <p id="rankdis" onclick="func()">Click here to see your rank!</p>
-   <p id="point" onclick="func2()">Click here to see your points!</p>
-   <input type="button" value="Attend a class" onclick="classes()"/>
-   <input type="button" value="Go on a hike" onclick="hike()"/>
-   <input type="button" value="Go on a camp-out" onclick="camp()"/>
-   <p id="meritdis" onclick="meritDis()">Click here to see or refresh your merit awards!</p>
-   <ul>
-     <li class="merit" id="fish"></li>
-     <li class="merit" id="swim"></li>
-     <li class="merit" id="camp"></li>
-     <li class="merit" id="f_aid"></li>
-     <li class="merit" id="music"></li>
-     <li class="merit" id="hike"></li>
-   </ul>
-   <h6 id="support">Questions? Comments? Concerns? Please contact: <a href="mailto: ceo.xanstudios@gmail.com">CEO.XanStudios@gmail.com</a></h6>
+
+   <p id="stats" onclick="stats()">Click here to see your stats!</p>
+
+   <div id="buttons">
+     <input type="button" value="Attend a class" onclick="classes()"/>
+     <input type="button" value="Go on a hike" onclick="hike()"/>
+     <input type="button" value="Go on a camp-out" onclick="camp()"/>
+   </div>
+   <div id="meritdis">
+     <p onclick="meritDis()">Click here to see or refresh your merit awards!</p>
+     <ul>
+       <li class="merit" id="fish"></li>
+       <li class="merit" id="swim"></li>
+       <li class="merit" id="camp"></li>
+       <li class="merit" id="f_aid"></li>
+       <li class="merit" id="music"></li>
+       <li class="merit" id="hike"></li>
+     </ul>
+   </div>
 </div>
+<h4 id="support">Questions? Comments? Concerns? Please contact: <a href="mailto: ceo.xanstudios.com">CEO.XanStudios@gmail.com</a></h>
 </body>
 </html>
