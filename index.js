@@ -59,11 +59,8 @@ else {
 }
 while (isNaN(troop) == true)
 };
-function func2() {
-  window.alert("You have " + points + " points!");
-};
-function func() {
-  window.alert("Your rank is " + rank + "!");
+function stats() {
+  window.alert("Points: " + points + "; Rank: " + rank + "; Camping nights: " + campTimes + ";");
 };
 function hike() {
   var lochike = prompt("Where do you want to hike? Your options are Grand Canyon, Forest, Mountain, or Death Valley?").toLowerCase()
