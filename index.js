@@ -60,7 +60,28 @@ else {
 while (isNaN(troop) == true)
 };
 function stats() {
-  window.alert("Points: " + points + "; Rank: " + rank + "; Camping nights: " + campTimes + ";");
+  var pointsUntil = 0;
+  switch (rank) {
+    case "Scout":
+       pointsUntil = (25 - points)
+      break;
+    case "Tenderfoot":
+        pointsUntil = (100 - points)
+      break;
+    case "Second Class":
+        pointsUntil = (150 - points)
+      break;
+    case "First Class":
+        pointsUntil = (200 - points)
+      break;
+    case "Star":
+        pointsUntil = (300 - points)
+      break;
+    case "Life":
+        pointsUntil = (400 - points)
+      break;
+  }
+  window.alert("Points: " + points + "; Rank: " + rank + "; Camping nights: " + campTimes + "; " + pointsUntil + " points until next rank;");
 };
 function hike() {
   var lochike = prompt("Where do you want to hike? Your options are Grand Canyon, Forest, Mountain, or Death Valley?").toLowerCase()
