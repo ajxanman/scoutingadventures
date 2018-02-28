@@ -131,13 +131,13 @@ function classes(){
           merits[3] = swimming;
           window.alert("Just keep swimming, just keep swimming! For taking this class you have earned 15 points! You now have a total of " + points + " points!");
         break;
-        case ("fishing"):
+      case ("fishing"):
           points = points + 10;
           fishing = true;
           merits[0] = fishing;
           window.alert("Catch of the day! You have earned 10 points for taking this class! You now have a total of " + points + " points!");
         break;
-        case ("camping"):
+      case ("camping"):
         if (campTimes > 2) {
           camping = true;
           merits[1] = camping;
@@ -146,16 +146,16 @@ function classes(){
         }
         else {
           var more = (3 - campTimes);
-          window.alert("Sweet! You have everything you need for this merit, except " + more + " more camping nights!");
+          window.alert("Sweet! You have everything you need for this merit, except " + more + " more camping nights! Please take this class again once you have them!");
         }
-          break;
-        case ("first aid"):
+        break;
+      case ("first aid"):
           first_aid = true;
           merits[2] = first_aid;
           points = points + 15;
           window.alert("Wrap it up! You have earned 15 points! You now have a total of " + points + " points!");
           break;
-        case ("music"):
+      case ("music"):
             music = true;
             merits[4] = music;
             points = points + 10;
@@ -243,18 +243,9 @@ function camp() {
         break;
   default:
     window.alert("I don't think that was one of the options!");
-}
-  rankAdvan();
-  campTimes += 1;
-  if (camping = false){
-    if (campTimes > 2) {
-      if (evrythngElseCamp = true) {
-        camping = true;
-        merits[1] = camping;
-        window.alert("Congratulations! You have earned the camping merit award!")
-      }
-    }
   }
+  campTimes += 1;
+  rankAdvan();
 };
 function notify() {
   window.alert("Congratulations! You are now " + rank + " rank!");
