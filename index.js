@@ -25,7 +25,7 @@ function rankAdvan(){
       notify()
     }
   }
-  if (points > 399) {
+  if ((points > 399) && (campTimes > 4)) {
     rank = "Eagle";
   } else if (points > 299) {
       rank = "Life";
@@ -60,6 +60,7 @@ while (isNaN(troop) == true)
 };
 function stats() {
   var pointsUntil = 0;
+  var nightsUntil = 0;
   switch (rank) {
     case "Scout":
        pointsUntil = (25 - points)
@@ -78,9 +79,23 @@ function stats() {
       break;
     case "Life":
         pointsUntil = (400 - points)
+        nightsUntil = (5 - campTimes)
       break;
   }
-  window.alert("Points: " + points + "; Rank: " + rank + "; Camping nights: " + campTimes + "; " + pointsUntil + " points until next rank;");
+  switch (rank) {
+    case "Life":
+      if (nightsUntil < 6) {
+      window.alert("Points: " + points + "; Rank: " + rank + "; Camping nights: " + campTimes + "; " + pointsUntil + " points and " + nightsUntil + " camping nights until next rank;");
+    } else {
+      window.alert("Points: " + points + "; Rank: " + rank + "; Camping nights: " + campTimes + "; " + pointsUntil + " points until next rank;");
+    }
+      break;
+    case "Eagle":
+        window.alert("Points: " + points + "; Rank: " + rank + "; Camping nights: " + campTimes + ";")
+        break;
+    default:
+      window.alert("Points: " + points + "; Rank: " + rank + "; Camping nights: " + campTimes + "; " + pointsUntil + " points until next rank;");
+  }
 };
 function hike() {
   var lochike = prompt("Where do you want to hike? Your options are Grand Canyon, Forest, Mountain, or Death Valley?").toLowerCase()
@@ -183,7 +198,7 @@ function meritDis() {
     document.getElementById("music").innerHTML = "Music";
   }
   if (merits[5] == true) {
-    document.getElementById("hike").innerHTML = "Hiking"
+    document.getElementById("hike").innerHTML = "*Hiking*"
   }
 };
 function camp() {
@@ -248,6 +263,11 @@ function camp() {
   rankAdvan();
 };
 function notify() {
+  if (rank == "Eagle") {
+    window.alert("Congratulations! You have achieved Eagle rank! This is the highest rank you can get in this game, but you may continue to play if you wish!");
+  }
+  else {
   window.alert("Congratulations! You are now " + rank + " rank!");
+  }
 };
 console.log("No fatal errors in JS!"); //This will not log if there is anything fataly wrong with the code. Make any additions above it.
