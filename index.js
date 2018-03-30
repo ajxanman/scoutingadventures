@@ -40,13 +40,12 @@ function rankAdvan(){
   }
   rankUp();
 };
-
 for (var i = 0; i < 1;) {
 do {
-if (isNaN(troop) == true) {
+  if (isNaN(troop) == true) {
     troop = prompt("Please use a number!")
   }
-else {
+  else {
     if (troop == 666) {
       document.write("http://ih0.redbubble.net/image.46738492.0562/flat,800x800,075,f.u2.jpg");
       i++
@@ -113,13 +112,14 @@ function hike() {
     default:
         window.alert("Sorry! Troop " + troop + " can't go there! Please try again and check your spelling!");
      }
-     if (hiking = false) {
-       if (hikeExp[0] && hikeExp[1] && hikeExp[2] && hikeExp[3] == true) {
-       hiking = true;
-       merits[5] = hiking;
-       window.alert("Congrats! You have earned a secret merit award, Hiking!");
+     if (hiking == false) {
+       if ((((hikeExp[0] && hikeExp[1]) && hikeExp[2]) && hikeExp[3]) == true) {
+         hiking = true;
+         merits[5] = hiking;
+         window.alert("Congrats! You have earned a secret merit award, Hiking!");
       }
     }
+    console.log(hikeExp);
      rankAdvan();
   };
 function classes(){
